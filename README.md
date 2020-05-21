@@ -9,7 +9,7 @@ How To Run My UI Test...
   "npm install cypress"
   4. install Chai
   "npm install chai"
-  5. Run command “./node_modules/.bin/cypress open ” to open up the Test and run through the browser.
+  5. Run command “./node_modules/.bin/cypress open” to open up the Test and run through the browser.
   OR
   6. Run command “./node_modules/.bin/cypress run” to run the test in a headless state.
 
