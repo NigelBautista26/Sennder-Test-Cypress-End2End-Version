@@ -1,6 +1,6 @@
 ### Sennder Cypress Automation End2End Version ###
 
-...How To Run My UI Test...
+How To Run My UI Test...
 
   1. Download Node and NPM
 	https://nodejs.org/en/
