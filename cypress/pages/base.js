@@ -4,7 +4,7 @@ class Base {
 
     goToLoginPage() { 
         this.url()
-        expect(cy.url().should("include", "sprintboards.io/auth/login"))//Asserts the URL...
+        expect(cy.url().should('contain', "sprintboards.io/auth/login"))//Asserts the URL...
      }
     
 }
