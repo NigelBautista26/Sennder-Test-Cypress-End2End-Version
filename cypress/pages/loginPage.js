@@ -11,7 +11,7 @@ class LoginPage {
         this.emailField.type(email)
         this.passwordField.type(password)
         this.loginButton.click()
-        cy.url().should('contain', "https://sprintboards.io") //Asserts the URL...
+        cy.url().should('include', "https://sprintboards.io") //Asserts the URL...
     }
     
 }
