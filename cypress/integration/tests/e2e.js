@@ -6,19 +6,36 @@ import boardPage from "../../pages/boardPage"
 import cardPage from "../../pages/cardPage"
 
 describe("Test The Application", () => {
-    beforeEach(() => {  
+    before(() => {  
         base.goToLoginPage()
         loginPage.login()
-        // Im putting the create board in here and not as a test because this is a pre step for card creation...
-        homePage.clickCreateBoardButton()
-        boardPage.createBoard()
+        // Cypress.Cookies.preserveOnce('api_token', 'remember_token')
     })
 
-    it('End To End Scenario To Test...', () => {
-        cardPage.createGreenCard()
-        cardPage.createRedCard()
-        cardPage.ThumbsUp()
-        cardPage.deleteRedCard()
+    beforeEach(() => {
+        Cypress.Cookies.preserveOnce('api_token', 'remember_token')
+        Cypress.Cookies.preserveOnce('user', 'remember_token')
     })
+
+    it('Create Board', () => {
+		homePage.clickCreateBoardButton()
+		boardPage.createBoard()
+	})
+	
+	it('Add a Green card.', () => {
+        cardPage.createGreenCard()
+	})
+
+	it('Add a Red card.', () => {
+		cardPage.createRedCard()
+	})
+
+	it('Click thumbs up for the first card.', () => {
+		cardPage.ThumbsUp()
+	})
+
+	it('Delete the red card created', () => {
+		cardPage.deleteRedCard()
+	})
     
 })

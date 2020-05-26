@@ -16,7 +16,7 @@ class boardPage {
   get confirmationPopup() { return cy.get('.swal-modal') }
 
   createBoard() {
-    this.sessionNameField.type('Nigels Board')
+    this.sessionNameField.type('My first board')
     expect(this.title.should('have.text', boardTitleValue))
     this.chooseOwnerSelection.select('Sennder')
 	  expect(cy.url().should('include', 'boards/create')) // The string can also be put into a global variable...

@@ -1,3 +1,6 @@
+import boardPage from "./../pages/boardPage"
+import homePage from "./homePage"
+
 const greenCardTitleValue = 'Goal was achieved'
 const greenCardDescriptionValue = 'Sprint was well planned'
 const redCardTitleValue = 'Goal was not achieved'

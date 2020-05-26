@@ -16,5 +16,9 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+// Cypress.Cookies.defaults({
+//     whitelist: "ceHViQvCPtpvgaxjCb6DqftI0NXSboHUS4cEqL5Ei7INO0UtlzAT1Wc6yAXS"
+//   })
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
