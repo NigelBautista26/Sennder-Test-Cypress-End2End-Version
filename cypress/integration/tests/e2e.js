@@ -9,7 +9,6 @@ describe("Test The Application", () => {
     before(() => {  
         base.goToLoginPage()
         loginPage.login()
-        // Cypress.Cookies.preserveOnce('api_token', 'remember_token')
     })
 
     beforeEach(() => {
