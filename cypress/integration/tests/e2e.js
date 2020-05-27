@@ -18,7 +18,7 @@ describe("Test The Application", () => {
 
     it('Create Board', () => {
 		homePage.clickCreateBoardButton()
-		boardPage.createBoard()
+        boardPage.createBoard()
 	})
 	
 	it('Add a Green card.', () => {
@@ -35,6 +35,10 @@ describe("Test The Application", () => {
 
 	it('Delete the red card created', () => {
 		cardPage.deleteRedCard()
-	})
+    })
+
+    it('Logout User', () => {
+		base.logoutUser()
+    })
     
 })
