@@ -1,6 +1,3 @@
-const email = 'sennderqa3@gmail.com'
-const password = 'n*H7A7f@&ikbwu'
-
 class LoginPage {
 
     get emailField() { return cy.get("input[type='email']") }
@@ -8,10 +5,13 @@ class LoginPage {
     get loginButton() { return cy.get('.btn-primary') }
     
     login() { 
-        this.emailField.type(email)
-        this.passwordField.type(password)
+        cy.fixture('user').as('userData') // User Data from a JSON Fixture file...
+        cy.get("@userData").then((userData) => { // use my Fixture Data...
+        this.emailField.type(userData.email)
+        this.passwordField.type(userData.password)
         this.loginButton.click()
         cy.url().should('include', "https://sprintboards.io") //Asserts the URL...
+        })  
     }
     
 }
